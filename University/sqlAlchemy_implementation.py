@@ -21,7 +21,7 @@ session = Session()
 
 # try/except yra skirtas apsisaugoti nuo erroru. Jei iškyla netikėtas atvėjis galime atlikti atitinkančius vieksmus pagal tam tikrą error'a
 try:
-    # session.add_all funkcionalumas leidžia pridėti daug įrašų vienu metu. SQL tiesiog naudojant prilygsta cursor.executeMany funkcionalumui.
+    # session.add_all funkcionalumas leidžia pridėti daug įrašų vienu metu. Tiesiog SQL naudojant prilygsta cursor.executeMany() funkcionalumui.
     session.add_all([
         Student(first_name="Mike", last_name="Wazowski"),
         Student(first_name="Netti", last_name="Nashe"),
@@ -61,7 +61,7 @@ print(total)
 
 print("-----")
 
-# priminimas, kad yra filter ir yra filter_by skiriasi tuo, kad su filter_by galime ieškoti naudojant kwargs ir jis skirtas paprastom užklausom.
+# Priminimas, kad yra filter ir yra filter_by skiriasi tuo, kad su filter_by galime ieškoti naudojant kwargs ir jis skirtas paprastom užklausom.
 # pvz:
 # student = Student(first_name="Mike", last_name="Wazowski")
 # session.query(Student).filter_by(id = student.id)
